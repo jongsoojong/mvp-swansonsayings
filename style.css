@@ -1,0 +1,29 @@
+.button{
+  position: relative;
+  top: 380px;
+  left: 6%;
+  width: 235px;
+  height: 310px;
+  background:transparent;
+  border:none;
+  outline:none;
+}
+
+.quote {
+  font-size: 42px;
+  font-family: 'Great Vibes', cursive;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  width: 60%;
+  position: relative;
+  left: 32%;
+  top: -100px;
+}
+
+body {
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  length:100%;
+}

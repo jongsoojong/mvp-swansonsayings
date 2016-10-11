@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="ron">
+  <head>
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div ng-controller="ronController as vm">
+      <button class="button" ng-click='vm.quotes()'></button>
+      <div class="quote">
+        {{vm.line + vm.ronName}}
+      </div>
+    </div>
+  </body>
+</html>
