@@ -26,7 +26,7 @@ ron.factory('QuoteMaker', function($http){
   let getQuote = function() {
       return $http({
         method: 'GET',
-        url: 'http://ron-swanson-quotes.herokuapp.com/v2/quotes'
+        url: 'https://ron-swanson-quotes.herokuapp.com/v2/quotes'
       })
   }
   let getCounter = function(){
