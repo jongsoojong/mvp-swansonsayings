@@ -7,6 +7,7 @@ ron.controller('ronController', function(QuoteMaker){
 
 
   vm.quotes = function() {
+    console.log('inside qoutes')
     QuoteMaker.getQuote()
     .then(function(res){
       vm.line = res.data[0]
@@ -15,6 +16,7 @@ ron.controller('ronController', function(QuoteMaker){
     .catch(function(err){
       throw err;
     })
+    QuoteMaker.getCounter();
   }
 
 })
@@ -27,7 +29,15 @@ ron.factory('QuoteMaker', function($http){
         url: 'http://ron-swanson-quotes.herokuapp.com/v2/quotes'
       })
   }
+  let getCounter = function(){
+    console.log("I AM HITTING IT!!")
+    return $http({
+      method: 'GET',
+      url:'/api/click'
+    })
+  }
   return {
-    getQuote: getQuote
+    getQuote: getQuote,
+    getCounter: getCounter
   }
 })
